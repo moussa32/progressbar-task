@@ -2,12 +2,13 @@ import { PureComponent } from "react";
 
 export default class Step extends PureComponent {
   render() {
+    const { selected, index, active, label } = this.props;
     return (
-      <div className={`StepBlock ${this.props.selected ? "SelectedStep" : ""}`}>
+      <div className={`StepBlock ${selected ? "SelectedStep" : ""}`}>
         <div className="StepCircleWrapper">
-          <div className="StepCircle">{this.props.index + 1}</div>
+          <div className="StepCircle">{active ? "✓" : index + 1}</div>
         </div>
-        <span className="StepLabel">{this.props.label}</span>
+        <span className="StepLabel">{label}</span>
       </div>
     );
   }

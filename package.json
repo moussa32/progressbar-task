@@ -34,8 +34,7 @@
         ]
     },
     "eslintConfig": {
-        "extends": "@scandipwa",
-        "ignorePatterns": ["src/**"]
+        "extends": "@scandipwa"
     },
     "proxy": "https://demo100-ors-1588667385-swpwa451-zco.scandipwa.cloud/"
 }

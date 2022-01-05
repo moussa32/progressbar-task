@@ -27,6 +27,7 @@ class Checkout extends SourceCheckout {
       <StepNavigation
         labelArray={this.state.labelArray}
         currentStep={this.state.currentStep}
+        stepLength={this.state.labelArray.length}
       ></StepNavigation>
     );
   };
