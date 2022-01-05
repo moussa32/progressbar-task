@@ -11,6 +11,7 @@ class Checkout extends SourceCheckout {
       labelArray: [
         { index: 1, label: "shipping" },
         { index: 2, label: "billing" },
+        { index: 2, label: "success" },
       ],
     };
   }
