@@ -40,7 +40,6 @@
 .SelectedStep .StepCircle {
   background-color: var(--primary-base-color);
   z-index: 2;
-  animation: progress;
 }
 
 .StepBlock .StepCircleWrapper::before {
@@ -58,6 +57,7 @@
 
 .SelectedStep .StepCircleWrapper::after {
   content: "";
+  animation: progress 1.2s;
   width: 100%;
   height: 3px;
   position: absolute;
@@ -71,10 +71,7 @@
 
 @keyframes progress {
   0% {
-    width: 100%;
-  }
-  50% {
-    width: 50%;
+    width: 0%;
   }
   100% {
     width: 100%;
