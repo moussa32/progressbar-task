@@ -1,0 +1,82 @@
+.StepBlock {
+  flex: 1;
+}
+
+.StepCircle {
+  width: 35px;
+  height: 35px;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  margin: 0 auto;
+}
+
+.StepLabel {
+  display: block;
+  margin-top: 10px;
+  text-transform: capitalize;
+}
+
+.StepWrapper {
+  display: flex;
+  padding: 15px 0;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  background: var(--breadcrumbs-background);
+}
+
+.StepBlock .StepCircleWrapper {
+  padding: 0 20px;
+  position: relative;
+  transition: all 5.5s ease-out;
+}
+
+.SelectedStep .StepCircle {
+  background-color: var(--primary-base-color);
+  z-index: 2;
+  animation: progress;
+}
+
+.StepBlock .StepCircleWrapper::before {
+  content: "";
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: auto;
+  z-index: 1;
+}
+
+.SelectedStep .StepCircleWrapper::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  z-index: 1;
+  background-color: var(--primary-base-color);
+}
+
+@keyframes progress {
+  0% {
+    width: 100%;
+  }
+  50% {
+    width: 50%;
+  }
+  100% {
+    width: 100%;
+  }
+}
